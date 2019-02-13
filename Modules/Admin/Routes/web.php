@@ -11,7 +11,7 @@
 |
 */
 
-Route::prefix('admin')->middleware('auth')->group(function() {
+Route::prefix('admin')->middleware(['auth', '\Modules\Core\Http\Middleware\RoleMiddleware:admin'])->group(function() {
     Route::get('/', 'AdminController@index')->name('admin.index');
     //Route::get('/profile', 'ProfileController@index')->name('admin.profile');
     Route::prefix('profile')->group(function() {

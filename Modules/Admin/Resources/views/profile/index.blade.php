@@ -1,5 +1,7 @@
 @extends('admin::layouts.master')
 @section('content')
+
+
 <div class="content">
     <div class="row">
         <div class="col">

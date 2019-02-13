@@ -9,7 +9,8 @@
             </div>
         </a>
         <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-            Привет
+            {{ __("admin::messages.welcome") }}<br>
+
             <!--<div class="logo-image-big">
               <img src="{{ Module::asset('admin:img/logo-big.png') }}">
             </div>-->
@@ -20,7 +21,7 @@
             <li class="active ">
                 <a href={{ route('admin.index') }}>
                     <i class="nc-icon nc-bank"></i>
-                    <p>Dashboard</p>
+                    <p>{{ __('admin::messages.dashboard') }}</p>
                 </a>
             </li>
             <li>
@@ -44,7 +45,7 @@
             <li>
                 <a href="{{ route('admin.profile') }}">
                     <i class="nc-icon nc-single-02"></i>
-                    <p>User Profile</p>
+                    <p>{{ __('admin::messages.profile') }}</p>
                 </a>
             </li>
             <li>
