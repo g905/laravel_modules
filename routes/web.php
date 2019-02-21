@@ -11,13 +11,13 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
+
+    dd(\Illuminate\Support\Facades\Request::ip());
     return view('welcome');
-});
+});*/
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'WelcomeController@index')->name('home');
 
 Auth::routes();
 

@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Gepard\User;
 use Modules\Core\Entities\Permission;
 use Modules\Core\Entities\Role;
+use Illuminate\Support\Facades\DB;
 
 class UserTableSeeder extends Seeder
 {
@@ -18,6 +19,8 @@ class UserTableSeeder extends Seeder
     public function run()
     {
         Model::unguard();
+
+        DB::table('users')->truncate();
 
         // $this->call("OthersTableSeeder");
         $dev_role = Role::where('slug','developer')->first();

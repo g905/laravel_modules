@@ -2,9 +2,12 @@
 
 namespace Modules\Admin\Http\Controllers;
 
+use Gepard\helpers\GepardHelpers;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
+use Modules\Core\Entities\City;
+use Modules\Core\Entities\User;
 
 class AdminController extends Controller
 {
@@ -14,6 +17,7 @@ class AdminController extends Controller
      */
     public function index()
     {
+        //dd(City::where('user_id', \Auth::user()->id)->firstOrFail()->name);
         return view('admin::index');
     }
 
